@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="UTF-8">
+    <style>
+        p {
+            color: black;
+        }
+    </style>
+    <script type="text/javascript" src="https://lib.baomitu.com/jquery/3.4.1/jquery.js"></script>
+</head>
+
+<body>
+
+<button id="aaaaaaaaaaaa" style="font-size: 20px">yes</button>
+<br>
+<h3 id="times"></h3>
+<br>
+<h3 id="lalala"></h3>
+
+<script>
+    var times = 0;
+    var yanhua = 0;
+    var chuanyin = 0;
+    var hua = 0;
+    $("#aaaaaaaaaaaa").click(function () {
+        times++;
+        var aaa = Math.random();
+        if(aaa <= 0.00521){
+            alert("恭喜");
+            $("#lalala").text(times + "次中奖")
+        }else if(aaa <= 0.01 && aaa > 0.00521){
+            yanhua++;
+        }else if(aaa <= 0.02 && aaa > 0.01){
+            chuanyin++;
+        }else{
+            hua++;
+        }
+        console.log(aaa);
+        $("#times").text(times + "次抽奖" + "<br/>" + yanhua + "个烟花" + "<br/>" + chuanyin + "个传音" + "<br/>" + hua + "个玫瑰花")
+    })
+</script>
+
+</body>
+
+</html>
